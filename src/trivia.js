@@ -1,5 +1,6 @@
-export default [
+export const trivia = [
   {
+    id: 1,
     question:
       "The young Jedi Knight, Anakin Skywalker, becomes who in Star Wars?",
     answer: "Darth Vader",
@@ -7,6 +8,7 @@ export default [
     difficulty: "easy"
   },
   {
+    id: 2,
     question: "The planet Kashyyyk is home to who?",
     answer: "Chewbacca and the Wookiees",
     answerShown: false,

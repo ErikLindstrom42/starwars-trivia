@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <trivia-game />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TriviaGame from "./components/TriviaGame";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
-  }
+    TriviaGame,
+  },
 };
 </script>
 
