@@ -1,8 +1,10 @@
 <template>
   <div>
     <h3>Star Wars Trivia</h3>
-    <div v-for="item in triviaQuestions" :key="item.question">
-      <flash-card :card="item" @toggle="handleStatusChange" />
+    <div class="cards">
+      <div v-for="item in triviaQuestions" :key="item.question">
+        <flash-card :card="item" @toggle="handleStatusChange" />
+      </div>
     </div>
   </div>
 </template>
@@ -25,3 +27,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+</style>
