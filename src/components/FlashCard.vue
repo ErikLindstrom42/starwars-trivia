@@ -1,11 +1,24 @@
 <template>
-  <div>
+  <div class="card" :class="{ flipped: card.answerShown }">
+    <div class="card-inner">
+      <div class="question">
+        <h4>{{ card.question }}</h4>
+        <div>
+          <button @click="handleClick">Show Answer</button>
+        </div>
+      </div>
+      <div class="answer">
+        <h4>{{ card.answer }}</h4>
+      </div>
+    </div>
+  </div>
+  <!-- <div>
     <div v-if="!card.answerShown">
       <h2>{{ card.question }}</h2>
       <button @click="handleClick">Show Answer</button>
     </div>
     <div v-else>{{ card.answer }}</div>
-  </div>
+  </div> -->
 </template>
 <script>
 export default {
@@ -17,3 +30,56 @@ export default {
   },
 };
 </script>
+// Style not mine
+<style scoped>
+button {
+  background-color: yellow;
+  border: none;
+  color: black;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  margin-top: 20px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.question,
+.answer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.question {
+  background-color: black;
+  color: yellow;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 60px;
+}
+.answer {
+  background-color: yellow;
+  color: black;
+  transform: rotateY(180deg);
+}
+</style>
