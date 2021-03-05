@@ -1,6 +1,6 @@
 export const trivia = [
   {
-    id: 1,
+
     question:
       "The young Jedi Knight, Anakin Skywalker, becomes who in Star Wars?",
     answer: "Darth Vader",
