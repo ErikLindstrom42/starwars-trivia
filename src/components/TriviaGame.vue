@@ -43,6 +43,9 @@ export default {
       filteredTrivia: [],
     };
   },
+  mounted() {
+    this.filteredTrivia = this.triviaQuestions;
+  },
 };
 </script>
 <style scoped>
