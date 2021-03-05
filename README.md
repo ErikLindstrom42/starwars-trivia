@@ -2,7 +2,7 @@
 
 Trivia card app currently loading questions and answers from `trivia.js`
 Deployed at https://sw-trivia.web.app/
-Code type by Erik Lindstrom but largely based off of a learning module.
+Code written by Erik Lindstrom but largely based off of a learning module.
 
 ## Project setup
 ```
